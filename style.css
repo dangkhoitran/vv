@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: #fbeee6;
+    overflow-x: hidden;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+.center-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+#receive-btn {
+    font-size: 2rem;
+    padding: 20px 40px;
+    background: #e53935;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+#receive-btn:hover {
+    background: #b71c1c;
+}
+.envelope-effect {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+.envelope {
+    position: absolute;
+    width: 40px;
+    height: 60px;
+    background: #e53935;
+    border-radius: 8px 8px 16px 16px;
+    border: 2px solid #b71c1c;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    opacity: 0.92;
+    animation: fall linear infinite;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.envelope::after {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 12px;
+    background: #ffd600;
+    border-radius: 0 0 8px 8px;
+    margin-bottom: 6px;
+}
+@keyframes fall {
+    0% { transform: translateY(-70px) rotateZ(0deg); }
+    100% { transform: translateY(110vh) rotateZ(360deg); }
+}
+.popup {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+.popup.hidden {
+    display: none;
+}
+.popup-content {
+    background: #fffbe7;
+    padding: 32px 24px 24px 24px;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    min-width: 320px;
+    text-align: center;
+    position: relative;
+}
+.popup-content h2 {
+    margin-top: 0;
+    color: #d84315;
+}
+.close {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    font-size: 1.5rem;
+    color: #b71c1c;
+    cursor: pointer;
+}
+#bank, #account {
+    margin: 12px 0;
+    padding: 8px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 80%;
+}
+#confirm-btn {
+    margin-top: 16px;
+    padding: 10px 30px;
+    font-size: 1.1rem;
+    background: #e53935;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+#confirm-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+#confirm-btn:not(:disabled):hover {
+    background: #b71c1c;
+} 

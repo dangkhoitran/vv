@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhận Quà Tết Thiếu Nhi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="envelope-effect"></div>
+    <div class="center-container">
+        <button id="receive-btn">Nhận quà</button>
+    </div>
+    <!-- Popup nhập thông tin -->
+    <div id="popup" class="popup hidden">
+        <div class="popup-content">
+            <span class="close" id="close-popup">&times;</span>
+            <h2>Nhập số tài khoản ngân hàng để nhận quà của a Khui</h2>
+            <label for="bank">Chọn ngân hàng:</label>
+            <select id="bank">
+                <option value="">-- Chọn ngân hàng --</option>
+                <option>Vietcombank</option>
+                <option>Techcombank</option>
+                <option>MB Bank</option>
+                <option>VietinBank</option>
+                <option>ACB</option>
+                <option>TPBank</option>
+                <option>BIDV</option>
+                <option>VPBank</option>
+                <option>Sacombank</option>
+                <option>SHB</option>
+            </select>
+            <br>
+            <label for="account">Số tài khoản:</label>
+            <input type="text" id="account" maxlength="20" placeholder="Nhập số tài khoản" inputmode="numeric" pattern="[0-9]*">
+            <br>
+            <button id="confirm-btn" disabled>Xác nhận</button>
+        </div>
+    </div>
+    <!-- Popup troll -->
+    <div id="troll-popup" class="popup hidden">
+        <div class="popup-content">
+            <span class="close" id="close-troll">&times;</span>
+            <h2>KHÔNG LÀM MÀ ĐÒI CÓ ĂN THÌ CHỈ CÓ ĂN CỨT ĂN BUỒI ĐẦU</h2>
+            <div style="margin-top: 16px; font-size: 1.2rem; color: #b71c1c; font-weight: bold;">ANH EM MÌNH CỨ THẾ THÔI HẸHEHE</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
