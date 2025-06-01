@@ -159,4 +159,28 @@ body {
     10% { opacity: 1; }
     80% { top: 45vh; opacity: 1; }
     100% { top: 55vh; opacity: 0; }
+}
+
+@media (max-width: 600px) {
+  .popup-content {
+    min-width: 95vw;
+    max-width: 99vw;
+    padding: 18px 4vw 18px 4vw;
+    font-size: 1rem;
+  }
+  .falling-text {
+    font-size: 1.5rem !important;
+    word-break: break-word;
+    max-width: 90vw;
+    left: 50% !important;
+    transform: translateX(-50%);
+  }
+  #receive-btn {
+    font-size: 1.2rem;
+    padding: 12px 10vw;
+  }
+  #bank, #account, #account_name {
+    width: 100%;
+    font-size: 1rem;
+  }
 } 
